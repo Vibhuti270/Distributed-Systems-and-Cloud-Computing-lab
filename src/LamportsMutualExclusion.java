@@ -57,12 +57,6 @@ class Process {
         replyCount++;
     }
 
-    // Receive a reply message
-    public void receiveReply() {
-        replyCount++;
-        System.out.println("Process " + pid + " received a reply, total replies: " + replyCount);
-    }
-
     // Enter the critical section if all replies are received
     public void enterCriticalSection(int numProcesses) {
         if (replyCount == numProcesses - 1) {
